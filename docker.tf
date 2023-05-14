@@ -123,3 +123,8 @@ resource "aws_instance" "ec2_instance1" {
     Name = "Docker-server"
   }
 }
+
+# print the url of the docker server
+output "website_url" {
+  value     = join ("", ["http://", aws_instance.ec2_instance.public_dns, ":", "8080"])
+}
