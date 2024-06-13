@@ -1,7 +1,7 @@
 # configured aws provider with proper credentials
 provider "aws" {
   region = "us-east-1"
-  profile= "yusuf"
+  profile= "default"
 }
 
 # Create a remote backend for your terraform 
@@ -11,7 +11,7 @@ terraform {
     dynamodb_table = "app-state"
     key    = "LockID"
     region = "us-east-1"
-    profile = "austinobioma-realcloud"
+    profile = "temiolaoluniyi-realcloud"
   }
 }
 
